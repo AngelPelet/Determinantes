@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+#ordem-2{
+    display: none;
+}
+
+#ordem-3{
+    display: none;
+}
+
+#ordem-4{
+    display: none;
+}
+
+.espaco-numero{
+    display: inline-block;
+}
+
+.numero{
+    margin: 10px;
+    border: solid 2px black;
+}

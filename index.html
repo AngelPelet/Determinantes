@@ -8,87 +8,94 @@
     <script src="script.js" defer></script>
     <title>Determinante</title>
 </head>
-<body>
-    <h1>Determinantes</h1>
-    <p>Escolha a ordem da Matriz: 
-        <a class="bnt" onclick="ordem2()" href="#">2</a>
-        <a class="bnt" onclick="ordem3()" href="#">3</a>
-        <a class="bnt" onclick="ordem4()" href="#">4</a>
-    </p>
+<body>  
+    <div id="app">
+        <h1>Determinantes</h1>
+        <p>Escolha a ordem da Matriz:
+            <a class="bnt" onclick="ordem2()" href="#">2</a>
+            <a class="bnt" onclick="ordem3()" href="#">3</a>
+            <a class="bnt" onclick="ordem4()" href="#">4</a>
+        </p>
+        
+        <section id="ordem-2">
+            <div id="borda-2">
+                <div class="espaco-numero">
+                    <div class="numero"><input placeholder="n1" class="num n1" type="text"></div>
+                    <div class="numero"><input placeholder="n3" class="num n3" type="text"></div>
+                </div>
+                <div class="espaco-numero">
+                    <div class="numero"><input placeholder="n2" class="num n2" type="text"></div>
+                    <div class="numero"><input placeholder="n4" class="num n4" type="text"></div>
+                </div>
+            </div>
+            <br>
+            <button class="bnt2" onclick="calcular2()">Calcular</button>
+            <div>
+                <h3>Resposta:</h3>
+                <div class="res"></div>
+            </div>
+        </section>
 
-    <section id="ordem-2">
-        <div class="espaco-numero">
-            <div class="numero"><input placeholder="n1" class="num n1" type="number"></div>
-            <div class="numero"><input placeholder="n3" class="num n3" type="number"></div>
-        </div>
-        <div class="espaco-numero">
-            <div class="numero"><input placeholder="n2" class="num n2" type="number"></div>
-            <div class="numero"><input placeholder="n4" class="num n4" type="number"></div>
-        </div>
-        <br>
-        <button class="bnt" onclick="calcular2()">Calcular</button>
-        <div>
-            <h3>Resposta:</h3>
-            <div class="res"></div>
-        </div>   
-    </section>
+        <section id="ordem-3">
+            <div id="borda-3">
+                <div class="espaco-numero">
+                    <div class="numero"><input placeholder="n1" class="num n1a" type="text"></div>
+                    <div class="numero"><input placeholder="n4" class="num n4a" type="text"></div>
+                    <div class="numero"><input placeholder="n7" class="num n7a" type="text"></div>
+                </div>
+                <div class="espaco-numero">
+                    <div class="numero"><input placeholder="n2" class="num n2a" type="text"></div>
+                    <div class="numero"><input placeholder="n5" class="num n5a" type="text"></div>
+                    <div class="numero"><input placeholder="n8" class="num n8a" type="text"></div>
+                </div>
+                <div class="espaco-numero">
+                    <div class="numero"><input placeholder="n3" class="num n3a" type="text"></div>
+                    <div class="numero"><input placeholder="n6" class="num n6a" type="text"></div>
+                    <div class="numero"><input placeholder="n9" class="num n9a" type="text"></div>
+                </div>
+            </div>
+            <br>
+            <button class="bnt2" onclick="calcular3()">Calcular</button>
+            <div>
+                <h3>Resposta:</h3>
+                <div class="res-a"></div>
+            </div>
+        </section>
 
-    <section id="ordem-3">
-        <div class="espaco-numero">
-            <div class="numero"><input placeholder="n1" class="num n1a" type="text"></div>
-            <div class="numero"><input placeholder="n4" class="num n4a" type="text"></div>
-            <div class="numero"><input placeholder="n7" class="num n7a" type="text"></div>
-        </div>
-        <div class="espaco-numero">
-            <div class="numero"><input placeholder="n2" class="num n2a" type="text"></div>
-            <div class="numero"><input placeholder="n5" class="num n5a" type="text"></div>
-            <div class="numero"><input placeholder="n8" class="num n8a" type="text"></div>
-        </div>  
-        <div class="espaco-numero">
-            <div class="numero"><input placeholder="n3" class="num n3a" type="text"></div>
-            <div class="numero"><input placeholder="n6" class="num n6a" type="text"></div>
-            <div class="numero"><input placeholder="n9" class="num n9a" type="text"></div>
-        </div>  
-        <br>
-        <button class="bnt" onclick="calcular3()">Calcular</button>  
-        <div>
-            <h3>Resposta:</h3>
-            <div class="res-a"></div>
-        </div>
-    </section>
-
-    <section id="ordem-4">
-        <div class="espaco-numero">
-            <div class="numero"><input placeholder="n1" class="num n1b" type="text"></div>
-            <div class="numero"><input placeholder="n5" class="num n5b" type="text"></div>
-            <div class="numero"><input placeholder="n9" class="num n9b" type="text"></div>
-            <div class="numero"><input placeholder="n13" class="num n13b" type="text"></div>
-        </div>
-        <div class="espaco-numero">
-            <div class="numero"><input placeholder="n2" class="num n2b" type="text"></div>
-            <div class="numero"><input placeholder="n6" class="num n6b" type="text"></div>
-            <div class="numero"><input placeholder="n10" class="num n10b" type="text"></div>
-            <div class="numero"><input placeholder="n14" class="num n14b" type="text"></div>
-        </div>
-        <div class="espaco-numero">
-            <div class="numero"><input placeholder="n3" class="num n3b" type="text"></div>
-            <div class="numero"><input placeholder="n7" class="num n7b" type="text"></div>
-            <div class="numero"><input placeholder="n11" class="num n11b" type="text"></div>
-            <div class="numero"><input placeholder="n15" class="num n15b" type="text"></div>
-        </div>
-        <div class="espaco-numero">
-            <div class="numero"><input placeholder="n4" class="num n4b" type="text"></div>
-            <div class="numero"><input placeholder="n8" class="num n8b" type="text"></div>
-            <div class="numero"><input placeholder="n12" class="num n12b" type="text"></div>
-            <div class="numero"><input placeholder="n16" class="num n16b" type="text"></div>
-        </div>
-        <br>
-        <button class="bnt" onclick="calcular4()">Calcular</button>
-        <div>
-            <h3>Resposta:</h3>
-            <div class="res-b"></div>
-        </div>
-    </section>
-    
+        <section id="ordem-4">
+            <div id="borda-4">
+                <div class="espaco-numero">
+                    <div class="numero"><input placeholder="n1" class="num n1b" type="text"></div>
+                    <div class="numero"><input placeholder="n5" class="num n5b" type="text"></div>
+                    <div class="numero"><input placeholder="n9" class="num n9b" type="text"></div>
+                    <div class="numero"><input placeholder="n13" class="num n13b" type="text"></div>
+                </div>
+                <div class="espaco-numero">
+                    <div class="numero"><input placeholder="n2" class="num n2b" type="text"></div>
+                    <div class="numero"><input placeholder="n6" class="num n6b" type="text"></div>
+                    <div class="numero"><input placeholder="n10" class="num n10b" type="text"></div>
+                    <div class="numero"><input placeholder="n14" class="num n14b" type="text"></div>
+                </div>
+                <div class="espaco-numero">
+                    <div class="numero"><input placeholder="n3" class="num n3b" type="text"></div>
+                    <div class="numero"><input placeholder="n7" class="num n7b" type="text"></div>
+                    <div class="numero"><input placeholder="n11" class="num n11b" type="text"></div>
+                    <div class="numero"><input placeholder="n15" class="num n15b" type="text"></div>
+                </div>
+                <div class="espaco-numero">
+                    <div class="numero"><input placeholder="n4" class="num n4b" type="text"></div>
+                    <div class="numero"><input placeholder="n8" class="num n8b" type="text"></div>
+                    <div class="numero"><input placeholder="n12" class="num n12b" type="text"></div>
+                    <div class="numero"><input placeholder="n16" class="num n16b" type="text"></div>
+                </div>
+            </div>
+            <br>
+            <button class="bnt2" onclick="calcular4()">Calcular</button>
+            <div>
+                <h3>Resposta:</h3>
+                <div class="res-b"></div>
+            </div>
+        </section>  
+    </div>
 </body>
 </html>

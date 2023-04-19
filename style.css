@@ -5,6 +5,16 @@
     text-decoration: none;
 }
 
+body{
+    background-color: azure;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#app{
+    text-align: center;
+    margin-top: 10%;
+}
+
 #ordem-2{
     display: none;
 }
@@ -17,11 +27,85 @@
     display: none;
 }
 
+#borda-2{
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+    max-width: 150px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+}
+
+#borda-3{
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+    max-width: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+}
+
+#borda-4{
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+    max-width: 270px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+}
+
+h1{
+    margin-bottom: 40px;
+}
+
+p > a{
+    margin: 8px;
+    color: black;
+    background-color: rgba(128, 128, 128, 0.692);
+    padding: 12px;
+    border-radius: 12px 0px 12px 0px;
+    font-weight: bold;
+}
+
+p > a:hover{
+    background-color: grey;
+}
+
 .espaco-numero{
     display: inline-block;
 }
 
 .numero{
     margin: 10px;
-    border: solid 2px black;
+    border: solid 1px black;
+}
+
+.num{
+    width: 35px;
+    height: 35px;
+    text-align: center;
+}
+
+.bnt2{
+    margin: 15px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.452);
+    border-radius: 12px 0px 12px 0px;
+}
+
+.bnt2:hover{
+    background-color: grey;
+}
+
+.res{
+    margin-top: 5px;
+}
+
+.res-a{
+    margin-top: 8px;
+}
+
+.res-b{
+    margin-top: 22px;
 }

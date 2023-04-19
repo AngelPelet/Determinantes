@@ -46,7 +46,7 @@ function calcular2(){
 
     s = [(r1*r4) - (r2*r3)]
 
-    res.innerHTML = `<br> (${r1}*${r4}) - (${r2}*${r3}) = <strong>${s}</strong>`
+    res.innerHTML = `<br> [(${r1}*${r4}) - (${r2}*${r3})] = <strong>${s}</strong>`
 
 }
 
@@ -125,5 +125,5 @@ function calcular4(){
 
     s = [(r1*(c11)) + (r5*(c21)) + (r9*(c31)) + (r13*(c41))]
 
-    res.innerHTML = `<strong>${s}</strong>`
+    res.innerHTML = `{[(${r1}*(${c11})) + (${r5}*(${c21})) + (${r9}*(${c31})) +  (${r13}*(${c41}))]} = <strong>${s}</strong>`
 } 
